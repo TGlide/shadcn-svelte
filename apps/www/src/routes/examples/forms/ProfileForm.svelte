@@ -42,6 +42,16 @@
 		</FormDescription>
 		<FormMessage />
 	</FormField>
+	<FormField {form} let:fieldWithListeners name="test">
+		<FormLabel>Test</FormLabel>
+
+		<input
+			class="bg-black text-white"
+			type="text"
+			{...fieldWithListeners()}
+		/>
+	</FormField>
+
 	<FormField {form} let:field name="bio">
 		<FormLabel>Bio</FormLabel>
 		<FormInput type="textarea" {...field} />
